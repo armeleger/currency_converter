@@ -35,5 +35,5 @@ function convert() {
   const usdAmount = amount / rates[from];
   const converted = usdAmount * rates[to];
   document.getElementById("result").textContent =
-    `${amount} ${from} = ${converted.toFixed(2)} ${to}`;
+    `${amount.toLocaleString()} ${from} = ${converted.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})} ${to}`;
 }
